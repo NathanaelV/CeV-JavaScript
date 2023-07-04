@@ -7,6 +7,8 @@
   <title>Trabalhando com Strings</title>
   <style>
     body {
+      /* Aqui estou definido a formatação do body
+      Escolhi o tamanho e o a fonte. */
       font: normal 20pt Arial
     }
   </style>
@@ -14,9 +16,16 @@
 <body>
   <script>
     var nome = prompt('Qual é seu nome?')
+    // É possível usar tags HTML dentro das Strings do JS.
     document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br>`)
     document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`)
     document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br>`)
+    // A palavra `document` é obrigatória
+    document.write('Não precisa usar <strong>crase</strong> para usar as tags HTML.<br>')
+    var moeda = 13792.3
+    document.write(moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}), '<br>')
+    document.write(moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}), '<br>')
+    document.write(moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}), '<br>')
   </script>
 </body>
 </html>
