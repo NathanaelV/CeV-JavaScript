@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiros passos com DOM</title>
+  <style>
+    body {
+      background: rgb(146, 197, 255);
+      color: rgb(0, 0, 0);
+      font: normal 18pt Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciando com o DOM</h1>
+  <p>Aqui temos um parágrafo</p>
+  <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+  <div id="msg">Clique em mim</div>
+  <script>
+    window.document.write(window.document.charset) // UTF-8 
+    window.document.write(window.navigator.appName) // Mostra o Navegador atual, nesse caso Netscape e não Google Chrome, pois o Google Chrome está simulando um Netscape.
+    window.document.write(window.document.URL) // Mostra a url atual.
+  </script><br>
+  <script>
+    document.body.br
+    // Selecionar por Tag
+    // O window pode ser omitido, pois ele é o objeto global.
+    // Seleciona a primeira tag p, com o [0], e muda a cor dela para vermelho.
+    window.document.getElementsByTagName('p')[0].style.color = 'red' 
+    var p2 = window.document.getElementsByTagName('p')[1]
+    // O innerText pego o texto que está dentro da tag.
+    window.document.write('Está escrito assim: ' + p2.innerText) // Aprendendo a usar o DOM em JavaScript.
+
+    // Caso queira manter toda a formatação HTML
+    window.document.write('Está escrito assim: ' + p2.innerHTML) // Aprendendo a usar o DOM em JavaScript.
+
+    // Usar como um alert
+    window.alert('Está escrito assim: ' + p2.innerText) // Aprendendo a usar o DOM em JavaScript.
+
+    // Muda o texto do parágrafo 2.
+    p2.innerText = 'Mudando o texto do parágrafo 2'
+
+    // Muda a cor do parágrafo 2.
+    p2.style.color = 'blue'
+
+    // Murdar o background do body.
+    var corpo = document.body
+    corpo.style.background = 'rgb(100, 100, 100)'
+
+
+    // Coletar elemento pelo ID
+    var msg = document.getElementById('msg')
+
+    // Mudar o texto do elemento pelo ID
+    msg.innerText = 'Texto da DIV alterado pelo ID'
+
+    // Mudar a cor do elemento pelo ID
+    msg.style.background = 'rgb(255, 255, 0)' 
+
+
+    // Usao o querySelector()
+    
+    // Coletar elemento pelo classe usando selector
+    var msg = document.querySelector('div.msg')
+
+    // Coletar elemento pelo ID usando selector
+    var msg = document.querySelector('div#msg')
+  </script>
+</body>
+</html>
