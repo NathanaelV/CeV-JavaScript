@@ -23,9 +23,23 @@
     // A palavra `document` é obrigatória
     document.write('Não precisa usar <strong>crase</strong> para usar as tags HTML.<br>')
     var moeda = 13792.3
+    // Aqui é possível formatar a moeda para o padrão brasileiro, americano e europeu.
     document.write(moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}), '<br>')
     document.write(moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}), '<br>')
     document.write(moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}), '<br>')
+
+    // typeof => Retorna o tipo de dado que está sendo usado.
+    console.log(typeof 42);
+    // Expected output: "number"
+
+    console.log(typeof 'blubber');
+    // Expected output: "string"
+
+    console.log(typeof true);
+    // Expected output: "boolean"
+
+    console.log(typeof undeclaredVariable);
+    // Expected output: "undefined"
   </script>
 </body>
 </html>
