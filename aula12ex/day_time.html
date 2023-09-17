@@ -6,16 +6,20 @@
   <title>Hora do dia</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- Toda vez que o body for carregado, a função -->
+<body onload="carregar()">
   <header>
-    <h1>Título</h1>
+    <h1>Hora do Dia</h1>
   </header>
   <section>
-    <div>
-
+    <div id="msg">
+      Aqui vai aparecer a mensagem...
     </div>
-    <div>
-
+    <div id="foto">
+      <!-- A tag img busca a imagem -->
+      <!-- src é a fonte onde está a imagem, nesse caso, pasta js_imagens -->
+      <!-- O nome do arquivoé morning_250.png -->
+      <img id="imagem" src="js_imagens/morning_250.png" alt="Foto do dia">
     </div>
   </section>
   <footer>
