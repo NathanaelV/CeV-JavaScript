@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Múltipla Escolha</title>
+</head>
+<body>
+    <form id="formulario">
+        <p>Pergunta 1: Qual é a sua cor favorita?</p>
+        <label>
+            <input type="checkbox" name="resposta1" value="vermelho"> Vermelho<br>
+        </label>
+        <label>
+            <input type="checkbox" name="resposta1" value="azul"> Azul<br>
+        </label>
+        <input type="checkbox" name="resposta1" value="verde"> Verde<br>
+
+        <label for="">
+            
+        </label>
+        <p>Pergunta 2: Qual é a sua fruta favorita?</p>
+        <input type="checkbox" name="resposta2" value="maca"> Maçã<br>
+        <input type="checkbox" name="resposta2" value="banana"> Banana<br>
+        <input type="checkbox" name="resposta2" value="laranja"> Laranja<br>
+
+        <input type="button" value="Enviar Respostas" onclick="coletarRespostas()">
+    </form>
+
+    <h1>Respostas Recebidas:</h1>
+    <div id="respostas"></div>
+
+    <script>
+        function coletarRespostas() {
+            var respostas = [];
+
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            checkboxes.forEach(function(checkbox) {
+                respostas.push(checkbox.value);
+            });
+
+            if (respostas.length > 0) {
+                document.getElementById('respostas').innerHTML = "<p>Respostas Selecionadas: " + respostas.join(', ') + "</p>";
+            } else {
+                document.getElementById('respostas').innerHTML = "<p>Nenhuma resposta selecionada.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
