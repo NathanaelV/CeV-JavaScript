@@ -1,4 +1,4 @@
-function verificar() {
+function start_count() {
   let start_value = document.querySelector('input#starttext').value
   let end_value = document.getElementById('endtext').value
   let step_value = document.querySelector('input#step').value
