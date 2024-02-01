@@ -42,3 +42,11 @@ console.log('\nEstrutura de repetição com teste lógico no final: do..while')
 do {
   console.log('Tudo bem?')
 } while (condição)
+
+c = 0
+i = 1
+while ( c != 3 ) {
+  c = Math.floor(Math.random() * (19 - 3)) + 3
+  console.log(i)
+  i++
+}
